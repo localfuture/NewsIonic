@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/news"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Sports</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <ion-list>
+          <ion-list-header>
+            Latest Sports News
+          </ion-list-header>
+          <ion-item *ngFor="let tech of sports?.articles; let i = index" [routerLink]="['/news/sports',i]" routerLinkActive="router-link-active">
+            <ion-avatar slot="start">
+              <img [src]="tech?.urlToImage">
+            </ion-avatar>
+            <ion-label>
+              <h2>{{ tech?.title }}</h2>
+              <h3>{{ tech?.source.name }}</h3>
+              <p>{{ tech?.description }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

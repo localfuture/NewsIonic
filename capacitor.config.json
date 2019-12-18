@@ -1,0 +1,8 @@
+{
+  "appId": "www.news.ionic-news",
+  "appName": "news",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
